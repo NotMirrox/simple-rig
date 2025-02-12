@@ -1,4 +1,4 @@
-import { Players, RunService } from "@rbxts/services";
+import { Players, ReplicatedStorage, RunService } from "@rbxts/services";
 
 export type SimpleRigR6 = Model & {
 	["Left Leg"]: MeshPart & {
@@ -149,6 +149,7 @@ if (RunService.IsClient()) {
 	const clone = loadRig.Clone();
 	loadRig.Destroy();
 	loadRig = clone;
+	loadRig.Parent = ReplicatedStorage;
 }
 
 const BODY_PARTS = {
