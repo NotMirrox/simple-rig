@@ -321,7 +321,7 @@ export const BODY_PARTS = {
 	Torso: "Torso",
 } as const;
 
-export class Rig {
+export class SimpleRig {
 	public model = r6Rig.Clone();
 	public shirt = "";
 	public pants = "";
