@@ -1,4 +1,4 @@
-import { Lighting, Players, RunService } from "@rbxts/services";
+import { Lighting, Players, RunService } from "@rbxts/services"
 
 type SimpleRigR15 = Model & {
 	LeftLowerArm: MeshPart & {
@@ -312,7 +312,7 @@ const r15Rig = script.WaitForChild("r15Rig") as SimpleRigR15;
 const loadRig = RunService.IsServer() ? r15Rig : r15Rig.Clone();
 loadRig.Parent = Lighting;
 
-export const BODY_PARTS = {
+const BODY_PARTS = {
 	"Left Arm": "LeftArm",
 	Head: "Head",
 	"Left Leg": "LeftLeg",
@@ -432,3 +432,4 @@ export class SimpleRig {
 		this.model.Destroy();
 	}
 }
+
